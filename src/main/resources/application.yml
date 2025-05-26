@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/account
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate  # Проверка соответствия Entity и БД (не создает таблицы)
+    show-sql: true        # Логирование SQL-запросов
+    properties:
+      hibernate:
+        default_schema: dict
+        format_sql: true  # Красивое форматирование SQL в логах
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.xml  # Путь к XML-миграциям

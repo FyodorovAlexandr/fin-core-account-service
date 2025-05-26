@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <!-- Создание схемы dict -->
+    <changeSet id="1" author="Aleksandr">
+        <sql>
+            CREATE SCHEMA IF NOT EXISTS dict;
+        </sql>
+    </changeSet>
+
+    <!-- Последовательности (sequences) -->
+    <changeSet id="2" author="Aleksandr">
+        <createSequence
+                sequenceName="currency_id_seq"
+                schemaName="dict"
+                startValue="1"
+                incrementBy="1"/>
+
+        <createSequence
+                sequenceName="bank_book_id_seq"
+                schemaName="dict"
+                startValue="1"
+                incrementBy="1"/>
+    </changeSet>
+
+    <!-- Таблица currency -->
+    <changeSet id="3" author="Aleksandr">
+        <createTable tableName="currency" schemaName="dict">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- Заполнение currency тестовыми данными -->
+    <changeSet id="4" author="Aleksandr">
+        <sql>
+            INSERT INTO dict.currency (name)
+            VALUES ('USD'),
+                   ('EUR'),
+                   ('RUB'),
+                   ('GBP');
+        </sql>
+    </changeSet>
+
+    <!-- Таблица bank_book -->
+    <changeSet id="5" author="Aleksandr">
+        <createTable tableName="bank_book" schemaName="dict">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="user_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="number" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="amount" type="NUMERIC(19,2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="currency_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
