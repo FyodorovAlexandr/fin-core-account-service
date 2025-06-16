@@ -23,7 +23,7 @@
     - Кастомный интерцептор `CacheResultMethodInterceptor`
     - Двухуровневый кэш (метод + аргументы)
 
-### Ветка `exercise2` - Spring Core, Spring AOP
+### Ветка `exercise2` - Spring (Core, AOP)
 
 **Реализованные возможности:**
 
@@ -37,7 +37,7 @@
     - Кастомная аннотация `@CacheResult`
     - Управление кэшем через AOP
 
-### Ветка `exercise3` - Spring Core, Spring AOP, Spring Web с применением REST API и in-memory хранилища
+### Ветка `exercise3` - Spring (Core, AOP, Web) с применением REST API и in-memory хранилища
 
 **Реализованные возможности:**
 
@@ -55,7 +55,7 @@
     - Глобальный обработчик исключений через `@RestControllerAdvice` и `@ExceptionHandler`
     - Кастомные исключения для бизнес-ошибок
 
-### Ветка `exercise4` - Spring Core, Spring AOP, Spring Web, Spring Data JPA с применением REST API и PostgreSQL
+### Ветка `exercise4` - Spring (Core, AOP, Web, Data) с применением REST API и PostgreSQL
 
 **Реализованные возможности:**
 
@@ -78,7 +78,7 @@
 
 **Перед запуском программы необходимо запустить локально Docker и в терминале написать команду docker-compose up**
 
-### Ветка `exercise5` - Spring Core, Spring AOP, Spring Web, Spring Data JPA с применением REST API и PostgreSQL (Добавлены новые сущности и взаимосвязь между ними)
+### Ветка `exercise5` - Spring (Core, AOP, Web, Data) с применением REST API и PostgreSQL (Добавлены новые сущности и взаимосвязь между ними)
 
 **Реализованные возможности:**
 
