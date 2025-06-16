@@ -1,4 +1,4 @@
-# Spring Core, AOP, REST API
+# Spring Project
 
 Проект демонстрирует различные аспекты работы Spring Framework через отдельные ветки репозитория.
 В проекте используется Java 21, SpringBoot 3, Maven.
