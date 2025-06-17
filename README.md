@@ -1,27 +1,25 @@
 # Spring Project
 
 Проект демонстрирует различные аспекты работы Spring Framework через отдельные ветки репозитория.
-В проекте используется Java 21, SpringBoot 3.4.5, Maven и другие технологии.
+В проекте используется Java 21, SpringBoot 3.x, Maven и другие технологии.
 
 ## Структура веток
 
-### Ветка `exercise1` - Spring Core
+### Ветка `exercise1` - Spring Bean Lifecycle & Caching Demo
+- Проект демонстрирует работу жизненного цикла бинов в Spring, механизмы кэширования через прокси и кастомную обработку
+  бинов.
 
 **Реализованные возможности:**
-
-- Работа с разными скоупами бинов:
-    - Создание Singleton и Prototype бинов
-- Работа с механизмом `BeanFactoryPostProcessor`:
-    - Предупреждения для `@CacheResult` на prototype-бинах
-- Работа с жизненным циклом бинов:
-    - `@PostConstruct` инициализация тестовых данных
-    - `@PreDestroy` очистка ресурсов
-- Механизм `BeanPostProcessor`:
-    - Кастомный `CacheResultBeanPostProcessor`
-    - Автоматическое создание прокси для методов с `@CacheResult`
-- Реализация кэширования:
-    - Кастомный интерцептор `CacheResultMethodInterceptor`
-    - Двухуровневый кэш (метод + аргументы)
+- Полный жизненный цикл бинов Spring (от создания до уничтожения)
+- Кастомная аннотация `@CacheResult` для кэширования результатов методов
+- Реализация `BeanPostProcessor` и `BeanFactoryPostProcessor`
+- Работа с `@PostConstruct` и `@PreDestroy`
+- Сравнение singleton и prototype бинов
+- Динамическое проксирование методов. Кастомный интерцептор `CacheResultMethodInterceptor`
+- Двухуровневое потокобезопасное кэширование
+- После запуска программы в логах будет отображен полный цикл работы бинов
+**Технологический стек:**
+Java 21, Spring Boot 3.x, Maven, Lombok
 
 ### Ветка `exercise2` - Spring (Core, AOP)
 
