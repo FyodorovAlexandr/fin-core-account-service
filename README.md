@@ -5,7 +5,7 @@
 
 ## Структура веток
 
-### Ветка `exercise1` - Spring Bean Lifecycle & Caching Using Custom Proxy
+### Ветка `exercise1` - Spring Core: Bean Lifecycle & Caching Using Custom Proxy
 
 - Проект демонстрирует работу жизненного цикла бинов в Spring. Механизмы кэширования через прокси с помощью кастомного
   создания ProxyFactory и MethodInterceptor. А также механизмы кастомной обработки бинов.
@@ -22,7 +22,7 @@
 - После запуска программы в логах будет отображен полный цикл работы бинов
 
 **Технологический стек:**
-Java 21, Spring Boot 3.x, Maven, Lombok. Module Spring (Core)
+Java 21, Spring Boot 3.x, Maven, Lombok. Module Spring(Core)
 
 ### Ветка `exercise2` - Spring AOP: Caching, Validation, Logging and Exception Handling
 
@@ -38,25 +38,25 @@ Java 21, Spring Boot 3.x, Maven, Lombok. Module Spring (Core)
 - Подробное логирование всех этапов выполнения
 
 **Технологический стек:**
-Java 21, Spring Boot 3.x, Maven, Lombok. Module Spring (Core, AOP)
+Java 21, Spring Boot 3.x, Maven, Lombok. Module Spring(Core, AOP)
 
-### Ветка `exercise3` - Spring (Core, AOP, MVC) с применением in-memory хранилища
+### Ветка `exercise3` - Spring REST: Optimized CRUD with In-Memory Storage
+
+- Проект демонстрирует работу сервиса для управления банковскими счетами пользователей. Сервис предоставляет REST API
+  для выполнения CRUD операций с банковскими счетами с применением in-memory хранилища.
 
 **Реализованные возможности:**
 
-- Данная система позволяет:
-    - Получать информацию о существующих счетах
-    - Создавать новые счета
-    - Обновлять данные счетов
-    - Удалять счета
-- Приложение следует стандартной трехуровневой архитектуре:
-    - Контроллеры (`BankBookController`) - обработка HTTP запросов
-    - Сервисы (`BankBookServiceImpl`) - бизнес-логика
-    - In-memory хранилище (на основе `ConcurrentHashMap`)
-- Также было использовано:
-    - Обработка входящих запросов через `@RestController`
-    - Глобальный обработчик исключений через `@RestControllerAdvice` и `@ExceptionHandler`
-    - Кастомные исключения для бизнес-ошибок
+- Получение информации о счетах (по ID счета или по ID пользователя)
+- Создание новых счетов (проверка на дубликаты счетов)
+- Обновление существующих счетов (запрет на изменение номера счета после создания)
+- Удаление счетов (отдельного счета или всех счетов пользователя)
+- Обработка различных исключительных ситуаций и валидацию входных данных.
+- Специализированные исключения для различных сценариев
+- Стандартизированный формат ответа об ошибках (ErrorDto)
+
+**Технологический стек:**
+Java 21, Spring Boot 3.x, Maven, Lombok. Module Spring(Core, Web, Validation)
 
 ### Ветка `exercise4` - Spring (Core, AOP, MVC, Data) с применением PostgreSQL
 
