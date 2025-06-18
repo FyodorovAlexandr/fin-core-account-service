@@ -26,6 +26,8 @@ Java 21, Spring Boot 3.x, Maven, Lombok. Module Spring (Core)
 
 ### Ветка `exercise2` - Spring AOP: Caching, Validation, Logging and Exception Handling
 
+- Проект демонстрирует работу с аспектно-ориентированным программированием (AOP) для реализации кросс-функциональных задач.
+
 **Реализованные возможности:**
 
 - Кэширование результатов методов с кастомной аннотацией @CacheResult при помощи AOP
