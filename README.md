@@ -52,12 +52,12 @@ Java 21, Spring Boot 3.x, Maven, Lombok. Module Spring(Core, AOP)
 - Создание новых счетов (проверка на дубликаты счетов)
 - Обновление существующих счетов (запрет на изменение номера счета после создания)
 - Удаление счетов (отдельного счета или всех счетов пользователя)
-- Обработка различных исключительных ситуаций и валидацию входных данных.
+- Глобальный обработчик исключений и валидация входных данных
 - Специализированные исключения для различных сценариев
 - Стандартизированный формат ответа об ошибках (ErrorDto)
 
 **Технологический стек:**
-Java 21, Spring Boot 3.x, Maven, Lombok. Module Spring(Core, Web, Validation)
+Java 21, Spring Boot 3.x, Maven, Lombok. Module Spring(Core, AOP, Web, Validation)
 
 ### Ветка `exercise4` - Spring REST: Optimized CRUD with JPA and PostgreSQL
 
@@ -85,5 +85,8 @@ Java 21, Spring Boot 3.x, Maven, Lombok. Module Spring(Core, Web, Validation)
     - Развертывание PostgreSQL в Docker
     - Все таблицы связаны через внешние ключи
     - Логирование всех операций
+
+**Технологический стек:**
+  Java 21, Spring Boot 3.x, Maven, Docker, PostgreSQL, Liquibase, Lombok, MapStruct. Module Spring(Core, AOP, Web, Validation, Data JPA)
 
 **Перед запуском программы необходимо запустить локально Docker и в терминале выполнить команду docker-compose up**
