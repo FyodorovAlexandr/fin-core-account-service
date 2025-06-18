@@ -89,4 +89,4 @@ Java 21, Spring Boot 3.x, Maven, Lombok. Module Spring(Core, AOP, Web, Validatio
 **Технологический стек:**
   Java 21, Spring Boot 3.x, Maven, Docker, PostgreSQL, Liquibase, Lombok, MapStruct. Module Spring(Core, AOP, Web, Validation, Data JPA)
 
-**Перед запуском программы необходимо запустить локально Docker и в терминале выполнить команду docker-compose up**
+**Перед запуском программы необходимо поднять локально Docker и в терминале выполнить команду docker-compose up**
